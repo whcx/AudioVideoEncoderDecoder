@@ -22,7 +22,7 @@ add_library( # Sets the name of the library.
              ${SRCS})
 
 #note 使用target_include_directories需要指定target即av-lib,所以需要把这行放在add_library之后，否则编译报错，提示不能为target指定include目录，因为target还没built。
-target_include_directories(av-lib PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(av-lib PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 find_library( # Sets the name of the path variable.
               log-lib

@@ -14,8 +14,8 @@ import android.os.Message;
 
 import androidx.annotation.NonNull;
 
-import com.cxd.av.base.BaseAV;
 import com.cxd.av.utils.PlaybackConfiguration;
+import com.cxd.av.base.BaseAV;
 
 import java.io.File;
 import java.io.FileDescriptor;

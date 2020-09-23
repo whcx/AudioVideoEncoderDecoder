@@ -1,5 +1,6 @@
 #include <jni.h>
 #include <string>
+#include "include/Singleton.h"
 
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_cxd_av_activity_MainActivity_stringFromJNI(

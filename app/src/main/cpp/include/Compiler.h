@@ -1,11 +1,8 @@
 #pragma once
 
-#ifdef __cplusplus__
-#define CC_LIKELY( exp ) (__builtin_expect( !!(exp), true))
-#define CC_UNLIKELY( exp ) (__builtin_expect( !!(exp), false))
-#else
-#define CC_LIKELY( exp ) (__builtin_expect( !!(exp), 1))
-#define CC_UNLIKELY( exp ) (__builtin_expect( !!(exp), 0))
-#endif
+#define ANDROID_API_PUBLIC __attribute__((visibility("default")))
+#define ANDROID_API_HIDDEN __attribute__((visibility("hidden")))
 
-#define ANDROID_API __attribute__((visibility(default)))
+#define AV_ED_BEGIN namespace AV_ED {
+#define AV_ED_END }
+#define AV_ED_USING using namespace AV_ED;
