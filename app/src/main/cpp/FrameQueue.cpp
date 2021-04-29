@@ -1,5 +1,7 @@
 #include "include/Compiler.h"
 #include "include/FrameQueue.h"
+#include <jni.h>
+#include <string>
 
 AV_ED_BEGIN
 
@@ -74,3 +76,10 @@ FrameQueue::FrameQueue() {
     }
 
 AV_ED_END
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_cxd_av_activity_MainActivity_stringFromJNITest(JNIEnv *env, jobject thiz) {
+    std::string cppStr = "From cpp string test...";
+    return env->NewStringUTF(cppStr.c_str());
+}
